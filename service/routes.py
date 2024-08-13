@@ -57,12 +57,7 @@ def create_accounts():
         jsonify(message), status.HTTP_201_CREATED, {"Location": location_url}
     )
 
-######################################################################
-# LIST ALL ACCOUNTS
-######################################################################
-    ######################################################################
-    # LIST ALL ACCOUNTS
-    ######################################################################
+
 @app.route("/accounts", methods=["GET"])
 def list_accounts():
     """
@@ -76,17 +71,7 @@ def list_accounts():
 
     app.logger.info("Returning [%s] accounts", len(account_list))
     return jsonify(account_list), status.HTTP_200_OK
-# ... place you code here to LIST accounts ...
-    ######################################################################
-    # LIST ALL ACCOUNTS
-    ######################################################################
-    ##########################################
-# READ AN ACCOUNT
-######################################################################
 
-    ######################################################################
-    # READ AN ACCOUNT
-    ######################################################################
 @app.route("/accounts/<int:account_id>", methods=["GET"])
 def get_accounts(account_id):
     """
